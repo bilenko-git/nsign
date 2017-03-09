@@ -224,6 +224,7 @@ class Select2 extends InputWidget
         $labels = Html::tag('span', $settings['selectLabel'], $sOptions) .
             Html::tag('span', $settings['unselectLabel'], $uOptions);
         $out = Html::tag('span', $labels, $options);
+        $out = '';
         echo Html::tag('span', $out, ['id' => 'parent-' . $options['id'], 'style' => 'display:none']);
     }
 

@@ -17,7 +17,6 @@ $this->title = 'My Yii Application';
                 <?php $form = ActiveForm::begin(['action' => ['site/dishes'], 'method' => 'get']); ?>
                     
                     <?= Select2::widget([
-                        //'max' => 5,
                         'name' => 'ingredients',
                         'value' => $getIngredients,
                         'data' => $ingredients,

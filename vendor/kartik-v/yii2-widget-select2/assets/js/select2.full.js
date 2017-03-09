@@ -853,6 +853,7 @@ S2.define('select2/results',[
       var $options = self.$results
         .find('.select2-results__option[aria-selected]');
 
+      var countChecked = 0;
       $options.each(function () {
         var $option = $(this);
 
@@ -864,9 +865,21 @@ S2.define('select2/results',[
         if ((item.element != null && item.element.selected) ||
             (item.element == null && $.inArray(id, selectedIds) > -1)) {
           $option.attr('aria-selected', 'true');
+          countChecked++;
         } else {
           $option.attr('aria-selected', 'false');
         }
+      });
+
+      $options.each(function () {
+          if( countChecked == 5 ) {
+              var item = $.data(this, 'data');
+
+              if (!((item.element != null && item.element.selected) ||
+                  (item.element == null && $.inArray(id, selectedIds) > -1))) {
+                $(this).css({'pointer-events' : 'none', 'opacity' : '0.4'});
+              }
+          }
       });
 
       var $selected = $options.filter('[aria-selected=true]');
