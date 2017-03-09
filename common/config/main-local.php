@@ -1,17 +1,14 @@
 <?php
 
 $host = 'us-cdbr-iron-east-03.cleardb.net';
-$username = 'b1f73c49d6c869';
-$password = 'ad39206f';
-$dbname = 'heroku_ceefc16cb03a2ff';
+$username = 'b44ea332aefeaa';
+$password = '12b25153';
+$dbname = 'heroku_0550212b5359996';
 
-
-$host = 'localhost';
+/*$host = 'localhost';
 $dbname = 'nsign';
 $username = 'root';
-$password = '1';
-
-
+$password = '1';*/
 
 return [
     'components' => [
