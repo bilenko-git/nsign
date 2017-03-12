@@ -5,10 +5,10 @@ $username = 'b44ea332aefeaa';
 $password = '12b25153';
 $dbname = 'heroku_0550212b5359996';
 
-/*$host = 'localhost';
+$host = 'localhost';
 $dbname = 'nsign';
 $username = 'root';
-$password = '1';*/
+$password = '1';
 
 return [
     'components' => [

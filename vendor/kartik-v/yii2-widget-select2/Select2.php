@@ -38,6 +38,8 @@ class Select2 extends InputWidget
     const THEME_BOOTSTRAP = 'bootstrap';
     const THEME_KRAJEE = 'krajee';
 
+    public $max;
+
     /**
      * @var array $data the option data items. The array keys are option values, and the array values are the
      *     corresponding option labels. The array can also be nested (i.e. some array values are arrays too). For each
@@ -351,7 +353,8 @@ class Select2 extends InputWidget
             'sizeCss' => empty($this->addon) && $this->size !== self::MEDIUM ? 'input-' . $this->size : '',
             'doReset' => static::parseBool($this->changeOnReset),
             'doToggle' => static::parseBool($isMultiple && $this->showToggleAll),
-            'doOrder' => static::parseBool($isMultiple && $this->maintainOrder)
+            'doOrder' => static::parseBool($isMultiple && $this->maintainOrder),
+            'ds' => '3jk23'
         ]);
         $this->_s2OptionsVar = 's2options_' . hash('crc32', $options);
         $this->options['data-s2-options'] = $this->_s2OptionsVar;
